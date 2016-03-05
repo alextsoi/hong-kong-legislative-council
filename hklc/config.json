@@ -1,0 +1,11 @@
+{
+	"mongo": {
+		"command": "mongod --dbpath mongodb",
+		"host": "mongodb://localhost/hklc"
+	},
+	"calendar": {
+		"holiday": {
+			"update": "http://www.legco.gov.hk/xml/holiday.xml"
+		}
+	}
+}
