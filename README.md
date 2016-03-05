@@ -9,6 +9,8 @@ Build API on Hong Kong Legislative Council
 /calendar/schedule/update  
 
 ####2. Vote
+/vote
+/vote/update
 
 
 ## Source
