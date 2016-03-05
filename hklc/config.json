@@ -10,5 +10,23 @@
 		"schedule": {
 			"update": "http://www.legco.gov.hk/xml/schedule.xml"
 		}
+	},
+	"vote": {
+		"processed": [
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151014.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151028.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151104.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151111.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151118.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151125.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151202.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20151216.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20160106.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20160120.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20160127.xml",
+			"http://www.legco.gov.hk/yr15-16/chinese/counmtg/voting/cm_vote_20160217.xml"
+		],
+		"process": [
+		]
 	}
 }

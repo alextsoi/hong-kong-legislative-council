@@ -9,7 +9,7 @@ var _ = require("underscore");
 var moment = require('moment');
 
 var mongoose = require('mongoose');
-mongoose.connect( config.mongo.host );
+if(mongoose.connection.readyState != 1 && mongoose.connection.readyState != 2) mongoose.connect( config.mongo.host );
 /**
  * Define the holiday schema
  * @type {[type]}
@@ -74,7 +74,7 @@ router.get('/schedule', function(req, res, next) {
 	// Retrieve the schedule
 	var schedules = Schedule.find({}).sort({DateTime:'asc'}).exec(function(err, schedules){
 		if(err){
-			res.send({
+			res.json({
 				message: 'Error exists - ' + err.message
 			});
 		}else{
@@ -147,7 +147,7 @@ router.get('/schedule/update', function(req, res, next){
 						});
 					}
 				}
-				res.send({status: 'Success'});
+				res.json({status: 'Success'});
 			});
 		}else{
 			console.log('Error in fetching the schedule');
@@ -173,7 +173,7 @@ router.get('/holiday', function(req, res, next) {
 	// Retrieve the holidays
 	var holidays = Holiday.find({}).select('date').sort({date:'asc'}).exec(function(err, holidays){
 		if(err){
-			res.send({
+			res.json({
 				message: 'Error exists - ' + err.message
 			});
 		}else{
@@ -211,7 +211,7 @@ router.get('/holiday/update', function(req, res, next){
 						});
 					}
 				}
-				res.send({status: 'Success'});
+				res.json({status: 'Success'});
 			});
 		}else{
 			console.log('Error in fetching the holiday');
