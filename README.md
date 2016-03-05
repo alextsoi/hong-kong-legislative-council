@@ -12,6 +12,8 @@ Build API on Hong Kong Legislative Council
 /vote  
 /vote/update
 
+####3. TODO
+http://www.legco.gov.hk/odata/english/schedule-db.html (API beta from hkgov)
 
 ## Source
 All content stored in the database are from www.legco.gov.hk ( Hong Kong Legislative Council )
