@@ -6,6 +6,9 @@
 	"calendar": {
 		"holiday": {
 			"update": "http://www.legco.gov.hk/xml/holiday.xml"
+		},
+		"schedule": {
+			"update": "http://www.legco.gov.hk/xml/schedule.xml"
 		}
 	}
 }
