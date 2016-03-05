@@ -21,12 +21,26 @@ var holidaySchema = new Schema({
 holidaySchema.index({date: 1}, {unique: true});
 var Holiday = mongoose.model('Calendar_Holiday', holidaySchema);
 
+/**
+ * Schedule of legco
+ * @param  {[type]} req   [description]
+ * @param  {[type]} res   [description]
+ * @param  {[type]} next) {	res.json({		todo: "Schedule of council"	});} [description]
+ * @return {[type]}       [description]
+ */
 router.get('/schedule', function(req, res, next) {
 	res.json({
 		todo: "Schedule of council"
 	});
 });
 
+/**
+ * Retrieve the holiday list
+ * @param  {[type]} req   [description]
+ * @param  {[type]} res   [description]
+ * @param  {[type]} next) {		var       holidays [description]
+ * @return {[type]}       [description]
+ */
 router.get('/holiday', function(req, res, next) {
 	// Retrieve the holidays
 	var holidays = Holiday.find({}).select('date').sort({date:'asc'}).exec(function(err, holidays){
@@ -45,6 +59,13 @@ router.get('/holiday', function(req, res, next) {
 	});
 });
 
+/**
+ * Update the holiday list from legco
+ * @param  {[type]} req                                              [description]
+ * @param  {[type]} res                                              [description]
+ * @param  {[type]} next){		request(config.calendar.holiday.update, function(error, response, body){		if(!error && response.statusCode [description]
+ * @return {[type]}                                                  [description]
+ */
 router.get('/holiday/update', function(req, res, next){
 	// Update the holiday from hkgov
 	request(config.calendar.holiday.update, function(error, response, body){
@@ -77,6 +98,13 @@ router.get('/holiday/update', function(req, res, next){
 	});
 });
 
+/**
+ * Catch invalid route
+ * @param  {[type]} req                           [description]
+ * @param  {[type]} res                           [description]
+ * @param  {[type]} next){	res.json({		message: 'Invalid      route'	});} [description]
+ * @return {[type]}                               [description]
+ */
 router.get('/*', function(req, res, next){
 	res.json({
 		message: 'Invalid route'

@@ -2,4 +2,6 @@
 Build API on Hong Kong Legislative Council
 
 ## API List
-1. Calendar
+####1. Calendar
+/calendar/holiday
+/calendar/holiday/update
